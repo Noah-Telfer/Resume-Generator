@@ -1,0 +1,13 @@
+{
+    "TemplateName":{
+        "ModernTemplate": {
+            "id": 1,
+            "fileName":"modernTemplate.html"
+        },
+        "Basic Template" : {
+            "id":2,
+            "fileName":"basicTemplate.html"
+        }
+    }
+
+}

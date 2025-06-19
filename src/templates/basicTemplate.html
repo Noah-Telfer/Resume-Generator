@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ name }} – Resume</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; }
+    h1, h2, h3 { color: #111; margin-bottom: 4px; }
+    h1 { font-size: 28px; }
+    h2 { border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 24px; }
+    .section { margin-bottom: 20px; }
+    .job-title { font-weight: bold; }
+    .sub-info { font-style: italic; font-size: 0.9em; color: #555; }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <h1>{{ name }}</h1>
+  <p>{{ contact.email }} | {{ contact.phone }} | {{ contact.location }}</p>
+
+  <div class="section">
+    <h2>Education</h2>
+    {% for edu in education %}
+      <p><strong>{{ edu.degree }}</strong>, {{ edu.institution }} ({{ edu.dates }})<br>
+      GPA: {{ edu.gpa }}{% if edu.minor %}, Minor: {{ edu.minor }}{% endif %}<br>
+      {{ edu.honors | join(', ') }}</p>
+    {% endfor %}
+  </div>
+
+  <div class="section">
+    <h2>Experience</h2>
+    {% for job in experience %}
+      <p class="job-title">{{ job.title }} – {{ job.company }}</p>
+      <p class="sub-info">{{ job.location }} | {{ job.dates }}</p>
+      <ul>
+        {% for bullet in job.bullets %}
+          <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+
+  <div class="section">
+    <h2>Projects</h2>
+    {% for project in projects %}
+      <p class="job-title">{{ project.title }} – {{ project.company }}</p>
+      <p class="sub-info">{{ project.role }} | {{ project.dates }}</p>
+      <ul>
+        {% for bullet in project.bullets %}
+          <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> {{ skills.languages | join(', ') }}</p>
+    <p><strong>Tools & Technologies:</strong> {{ skills.tools | join(', ') }}</p>
+  </div>
+
+  <div class="section">
+    <h2>Certifications</h2>
+    <ul>
+      {% for cert in certifications %}
+        <li>{{ cert.name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>
