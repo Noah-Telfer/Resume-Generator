@@ -1,6 +1,9 @@
 # Ignore the output directory (where generated resumes go)
 data/output/
 
+# Ignore Random Directory
+data/Random/
+
 # Ignore the resume JSON input file
 data/resumeInformation.json
 

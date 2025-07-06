@@ -1,0 +1,68 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% Style options: 'casual', 'classic', 'banking', 'oldstyle', 'fancy'
+\moderncvstyle{banking}
+\moderncvcolor{black} 
+
+\usepackage[scale=0.85]{geometry}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+
+% ====== VARIABLES FROM JINJA2 ======
+\name{{'{'}}{{ myname }}{{'}'}}{{'{'}}{{ mysurname }}{{'}'}}
+\email{{'{'}}{{ myemail }}{{'}'}}
+\phone[mobile]{{'{'}}{{ myphone }}{{'}'}}
+\address{}{{'{'}}{{ mylocation }}{{'}'}}
+\social[linkedin]{{'{'}}{{ mylinkedin }}{{'}'}}
+
+\begin{document}
+
+\makecvtitle
+
+% WORK EXPERIENCE
+\section{Work Experience}
+{% for job in work_experience %}
+\cventry{{'{'}}{{ job.dates }}{{'}'}}{{'{'}}{{ job.title }}{{'}'}}{{'{'}}{{ job.company }}{{'}'}}{{'{'}}{{ job.location }}{{'}'}}{}{}{
+\begin{itemize}[leftmargin=*,nosep]
+    {% for bullet in job.responsibilities %}
+    \item {{ bullet }}
+    {% endfor %}
+\end{itemize}
+}
+{% endfor %}
+
+% EDUCATION
+\section{Education}
+{% for edu in education %}
+\cventry{{'{'}}{{ edu.dates }}{{'}'}}{{'{'}}{{ edu.degree }}{{'}'}}{{'{'}}{{ edu.school }}{{'}'}}{{'{'}}{{ edu.location }}{{'}'}}{}{
+{{ edu.details }}
+}
+{% endfor %}
+
+% TECHNICAL SKILLS
+\section{Technical Skills}
+{% for skill in technical_skills %}
+\cvitem{{'{'}}{{ skill.category }}{{'}'}}{{'{'}}{{ skill.name }}{{'}'}}
+
+{% endfor %}
+
+% CERTIFICATIONS
+\section{Certifications}
+{% for cert in certifications %}
+\cvitem{{'{'}}{{ cert.name }}{{'}'}}{{'{'}}{{ cert.description }}{{'}'}}
+{% endfor %}
+
+% PROJECTS
+\section{Projects}
+{% for proj in projects %}
+\cventry{{'{'}}{{ proj.dates }}{{'}'}}{{'{'}}{{ proj.title }}{{'}'}}{{'{'}}{{ proj.company }}{{'}'}}{}{}{}{
+\begin{itemize}[leftmargin=*,nosep]
+    {% for bullet in proj.details %}
+    \item {{ bullet }}
+    {% endfor %}
+\end{itemize}
+}
+{% endfor %}
+
+\end{document}

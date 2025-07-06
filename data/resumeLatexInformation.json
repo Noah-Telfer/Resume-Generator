@@ -1,0 +1,53 @@
+[
+  {
+    "myname": "Noah",
+    "mysurname": "Telfer",
+    "myemail": "noahtelfer.robert@gmail.com",
+    "myphone": "980-238-0247",
+    "mylocation": "Charlotte, NC",
+    "mylinkedin": "linkedin.com/in/noahtelfer",
+    "work_experience": [
+      {
+        "dates": "Mar 2023 -- Present",
+        "title": "Systems Operations Engineer",
+        "company": "Wells Fargo",
+        "location": "Charlotte, NC",
+        "responsibilities": [
+          "Maintained SLOs for front-end and back-end apps",
+          "Built dashboards in Grafana",
+          "Led MIM calls"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "dates": "Jan 2020 -- May 2023",
+        "degree": "B.S. in Computer Engineering",
+        "school": "UNC Charlotte",
+        "location": "Charlotte, NC",
+        "details": "Minor in Math\\\\ GPA: 3.75\\\\ Dean’s List, Chancellor’s List"
+      }
+    ],
+    "technical_skills": [
+      { "category": "Languages", "name": "Python, JavaScript, TypeScript" },
+      { "category": "Tools and Frameworks", "name": "Pandas, PyTorch, Scikit-learn, Splunk, Elastic APM, Grafana, AppDynamics, Ansible, Ansible Tower, Confluence, Urban Code Deploy, Harness" },
+      { "category": "DevOps:", "name": "Shell Scripting, PowerShell, Jira, GitHub, Postman, ThousandEyes" },
+      { "category": "Methodologies:", "name": "Agile" },
+      { "category": "Operating Systems", "name": "Linux, Windows" }
+    ],
+    "certifications": [
+      { "name": "AZ-900", "description": "Microsoft Azure Fundamentals" }
+    ],
+    "projects": [
+      {
+        "dates": "Apr 2024 -- Jun 2024",
+        "title": "Synthetic Monitoring",
+        "company": "Wells Fargo",
+        "details": [
+          "Developed synthetic monitors in ThousandEyes",
+          "Created alert systems"
+        ]
+      }
+    ]
+  }
+]
