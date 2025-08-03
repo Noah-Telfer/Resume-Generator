@@ -17,6 +17,16 @@
           "Built dashboards in Grafana",
           "Led MIM calls"
         ]
+      },
+      {
+        "dates": "May 2022 -- Aug 2022",
+        "title": "Intern",
+        "company": "Wells Fargo",
+        "location": "Charlotte, NC",
+        "responsibilities": [
+          "Automated certificate renewal with Ansible",
+          "Worked in Agile environment using Jira"
+        ]
       }
     ],
     "education": [

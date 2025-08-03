@@ -1,0 +1,23 @@
+""" The below text is a job offering that details the requirments and responseibilities of the job.
+{{ linkedInContent}}
+
+Rules: 
+- Enhance the details of the below json to include more keywords relative to the above job offering.
+- Ensure that the details are relevant to the project title provided and are complete sentences.
+- If you are provided more than one job, you must return a list of jobs with the same title as the input.
+
+```json
+{% for project in resumeData.projects %}
+{
+    "title": "{{ project.title }}",
+    "details": [
+        {% for detail in project.details %}
+        "{{ detail }}"{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}
+{% if not loop.last %}, {% endif %}
+{% endfor %}
+```
+
+""" 

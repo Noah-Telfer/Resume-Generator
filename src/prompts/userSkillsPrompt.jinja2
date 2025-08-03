@@ -1,0 +1,21 @@
+""" The below text is a job offering that details the requirments and responseibilities of the job.
+{{ linkedInContent}}
+
+Enhance the responsibilities of the below json to include more keywords relative to the above job offering.
+Ensure that the responsibilities are relevant to the job title provided and are complete sentences.
+If you are provided more than one job, you must return a list of jobs with the same title as the input.
+
+```json
+{% for skills in resumeData.technical_skills %}
+  {
+        { "category": {{skills.catagory}}, "name":  },
+        { "category": "Tools and Frameworks", "name": "list of skills" },
+        { "category": "Methodologies:", "name": "list of skills" },
+        { "category": "Operating Systems", "name": "list of skills" }
+    ]
+  }
+{% if not loop.last %}, {% endif %}
+{% endfor %}
+```
+
+""" 
